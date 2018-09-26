@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans/>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <action input="/ForwardAction.jsp" parameter="/Success.jsp"
+   path="/success" scope="request"
+   type="org.apache.struts.actions.ForwardAction" validate="false"/>
+ </action-mappings>
+ <controller/>
+</struts-config>

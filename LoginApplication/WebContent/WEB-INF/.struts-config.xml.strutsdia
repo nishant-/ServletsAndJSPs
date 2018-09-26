@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#Login" NAME="action0" PATH="/Login"
+  SHAPE="24,392,100,57" TITLE="LoginForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward0" PATH="/failure.jsp"
+   SHAPE="123,416,240,416,240,504,255,504" TARGET="page0"
+   TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward1" PATH="/success.jsp"
+   TARGET="page1" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/failure.jsp" SHAPE="256,496,50,25"
+  SUBTYPE="jsp" TITLE="failure.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/success.jsp" SHAPE="256,178,0,0"
+  SUBTYPE="jsp" TITLE="success.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/logoff.do"
+   SUBTYPE="confirmed" TARGET="action1" TITLE="/logoff.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#logoff" NAME="action1" PATH="/logoff"
+  SHAPE="504,216,103,57" TITLE="LogoffForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="logoffpage" NAME="forward0" PATH="/login.jsp"
+   TARGET="page2" TITLE="logoffpage" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1" PATH="/failure.jsp"
+   TARGET="page0" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page2" PATH="/login.jsp" SHAPE="40,192,50,40"
+  SUBTYPE="jsp" TITLE="login.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/Login.do" SUBTYPE="confirmed"
+   TARGET="action0" TITLE="/Login.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>jQuery Child ,Content and Visibility Filters</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<p class="a" id="para1">Para1</p>
+<p class="b">Para2</p>
+<p id="para3" lang="en-us">Para3</p>
+<p id="para4">Para4</p>
+
+<script type="text/javascript">
+$("document").ready(function(){
+	//$("p:contains(2)").css("border","2px dashed balck");//selects para which contains 2
+	//$("p:contains(2),li:contains(3)").css("border","2px dashed balck");//selects para and list which contain 3
+	//$("p:parent").css("border","2px dashed balck");//selects  all p that has content
+	//$("ul:has(li[class=a])").css("border","2px dashed balck");//selects the ul which has a li item whose class=a
+	//$("ul li:nth-child(3)").css("border","2px dashed balck"); //selects 3rd child of li which is in ul
+	//$("ul li:last-child").css("border","2px dashed balck");//selects last child in the li
+	$("ul li:nth-child(3n)").css("border","2px dashed balck"); //select every third element here n starts from 1
+});
+</script>
+</body>
+</html>

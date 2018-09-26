@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Inserting content</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<p class="a" id="para1">Para1</p>
+<p class="b">Para2</p>
+<p id="para3" lang="en-us">Para3</p>
+<p id="para4">Para4</p>
+<script type="text/javascript">
+$("document").ready(function(){
+	//$("p").append(" some content appended");//appends the text to each para
+	//$("p").prepend("Hello! ");//inserts content at the beginning of para
+	//$("p:last").appendTo("p:first");//appends last para to the first (ordering of para changes)
+	$("p:last").prependTo("p:first");//prepends last para to first
+});
+</script>
+</body>
+</html>

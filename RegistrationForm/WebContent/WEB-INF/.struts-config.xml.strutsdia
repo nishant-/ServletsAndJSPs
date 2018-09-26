@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#success" NAME="action0" PATH="/success"
+  SHAPE="32,129,0,0" SUBTYPE="parameter" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action0" PATH="/Success.jsp" TARGET="page0"
+   TITLE="parameter" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/Success.jsp" SHAPE="240,241,0,0"
+  SUBTYPE="jsp" TITLE="Success.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

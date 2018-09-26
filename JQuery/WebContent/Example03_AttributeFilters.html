@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>jQuery Attribute Filters</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<p class="a" id="para1">Para1</p>
+<p class="b">Para2</p>
+<p id="para3" lang="en-us">Para3</p>
+<script type="text/javascript">
+$("document").ready(function(){
+	//$("p[class]").css("border" , "2px solid dashed black");//selects all para which has class attribute
+	//$("p[id=para3]").css("border" , "2px solid dashed black");//selects para with id=para3
+	//$("p[id^=para]").css("border" , "2px solid dashed black");//selects para starts with id=para
+	$("p[id^=para][lang*=en-]").css("border" , "2px solid dashed black");//selects para starts with id=para and  language attribute contains en- 
+	
+	
+});
+</script>
+</body>
+</html>

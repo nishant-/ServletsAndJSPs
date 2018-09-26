@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Manipulating page content</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<p class="a" id="p1">Para1</p>
+<p class="b">Para2</p>
+<p>Para3</p>
+<script type="text/javascript">
+$("document").ready(function(){
+	//alert($("#list1").html());//selects all list items with id=list1 and displays the html contained in it
+	//$("#list1").html("<li>This is a new list item</li>");//replaces li with new html content passed to the html
+	//$("#p1").html("<p>this is a new paragraph</p>"); //replaces para with id=p1 with new content
+	$("p:last").text("this is the last paragraph");//sets the text of the paragraph...note here there must be no space after or before semicolon
+});
+</script>
+</body>
+</html>

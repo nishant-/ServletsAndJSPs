@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+  <form-bean name="BackForm" type="com.nishant.insert.BackForm"/>
+  <form-bean name="DataForm" type="com.nishant.insert.DataForm"/>
+  <form-bean name="IndexForm" type="com.nishant.insert.IndexForm"/>
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <action input="/index.jsp" name="IndexForm" path="/index"
+   scope="session" type="com.nishant.insert.IndexAction">
+   <forward name="userData" path="/UserData.jsp"/>
+  </action>
+  <action input="/UserData.jsp" name="DataForm" path="/UserData"
+   scope="session" type="com.nishant.insert.DataAction">
+   <forward name="success" path="/success.jsp"/>
+   <forward name="failure" path="/failure.jsp"/>
+  </action>
+  <action input="/success.jsp" name="BackForm" path="/back"
+   scope="session" type="com.nishant.insert.BackAction">
+   <forward name="back" path="/UserData.jsp"/>
+  </action>
+ </action-mappings>
+ <controller/>
+ <message-resources parameter="com.nishant.insert.applicationResources"/>
+</struts-config>

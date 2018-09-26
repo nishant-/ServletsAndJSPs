@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#index" NAME="action0" PATH="/index"
+  SHAPE="16,176,100,57" TITLE="IndexForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="userData" NAME="forward0"
+   PATH="/UserData.jsp" TARGET="page2" TITLE="userData" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/success.jsp" SHAPE="752,16,50,40"
+  SUBTYPE="jsp" TITLE="success.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/back.do" SUBTYPE="confirmed"
+   TARGET="action1" TITLE="/back.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/failure.jsp" SHAPE="1096,136,50,25"
+  SUBTYPE="jsp" TITLE="failure.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page2" PATH="/UserData.jsp" SHAPE="296,88,50,40"
+  SUBTYPE="jsp" TITLE="UserData.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/UserData.do"
+   SUBTYPE="confirmed" TARGET="action2" TITLE="/UserData.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#UserData" NAME="action2" PATH="/UserData"
+  SHAPE="496,24,100,57" TITLE="DataForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/success.jsp"
+   TARGET="page0" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="failure" NAME="forward1" PATH="/failure.jsp"
+   TARGET="page1" TITLE="failure" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#back" NAME="action1" PATH="/back"
+  SHAPE="552,432,100,41" TITLE="BackForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="back" NAME="forward0" PATH="/UserData.jsp"
+   TARGET="page2" TITLE="back" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+</PROCESS>

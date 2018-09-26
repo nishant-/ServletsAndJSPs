@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#index" NAME="action0" PATH="/index"
+  SHAPE="32,17,0,0" TITLE="Form1" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="page2" NAME="forward0" PATH="/page2.jsp"
+   TARGET="page0" TITLE="page2" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/page2.jsp" SHAPE="240,17,0,0"
+  SUBTYPE="jsp" TITLE="page2.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/page2.do" SUBTYPE="confirmed"
+   TARGET="action2" TITLE="/page2.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#page2" NAME="action2" PATH="/page2"
+  SHAPE="448,17,0,0" TITLE="Form2" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="page3" NAME="forward0" PATH="/page3.jsp"
+   TARGET="page1" TITLE="page3" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/page3.jsp" SHAPE="656,129,0,0"
+  SUBTYPE="jsp" TITLE="page3.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

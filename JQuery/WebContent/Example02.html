@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Example02_Selectors</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<p class="a">Para1</p>
+<p class="b">Para2</p>
+<p>Para3</p>
+<script type="text/javascript">
+$("document").ready(function(){
+//	$("#list1").css("border","1px solid green");//id selector
+	//$("*").css("border","1px solid blue");//wild card selector
+	//$(".a").css("border","1px solid red");//class selector
+	//$("p").css("border","1px solid black");//tag/element selector
+	//$("p.a").css("border","1px solid yellow");//select all para with class a
+	//$("li,p.a").css("border","1px solid yellow");//all li and para with a applied
+	$("ul + p").css("border","2px solid blue");//the para next to ul
+	//$("ul ~ p").css("border","2px solid blue");//all para next to ul
+});
+</script>
+</body>
+</html>

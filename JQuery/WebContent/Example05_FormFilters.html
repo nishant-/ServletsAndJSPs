@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>jQuery Form Filters</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<form>
+Text1:<input type="text" size="15" id="e1"><br>
+Text2:<input type="text" size="2" id="e2"><br>
+Text3:<input type="text" size="2" id="f1" disabled="disabled"><br>
+Radio1:<input type="radio" id="e3" checked="checked"> Radio2:<input type="radio" id="e4"><br>
+Checkbox1:<input type="checkbox" id="e5" value="1" checked="checked">CheckBox2:<input type="checkbox" value="0" id="e6"><br>
+TextArea:<textarea rows="5" cols="5"></textarea>
+</form>
+<script type="text/javascript">
+$("document").ready(function(){
+	//$("form :input").before("INPUT:");//this space is required...inserts INPUT: before every input element of the form
+	//$("form :text").before("TEXT:");//inserts TEXT before every text element in the form
+	//$("form :text:enabled").before("ENABLED:");//puts ENABLED before enabled text fields
+	//$("form :text:disabled").before("DISABLED:");//puts DISABLED before enabled text fields
+	//$("form :checked").after("CHECKED");//puts CHECKED after the checked elements
+	$("form :checkbox:checked").before("CHECKED");//puts CHECKED before the checked checkbox
+	$("form :radio:checked").before("CHECKED");//puts CHECKED before checked radio
+	
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#test" NAME="action0" PATH="/test"
+  SHAPE="456,216,109,57" TITLE="LookupForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="add" NAME="forward0" PATH="/add.jsp"
+   TARGET="page0" TITLE="add" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="delete" NAME="forward1" PATH="/delete.jsp"
+   TARGET="page1" TITLE="delete" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/add.jsp" SHAPE="712,88,50,25"
+  SUBTYPE="jsp" TITLE="add.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page1" PATH="/delete.jsp" SHAPE="800,416,50,25"
+  SUBTYPE="jsp" TITLE="delete.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

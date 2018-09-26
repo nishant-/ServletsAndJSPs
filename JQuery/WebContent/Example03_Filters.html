@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>jQuery Filters Example</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<p class="a">Para1</p>
+<p class="b">Para2</p>
+<p>Para3</p>
+<script type="text/javascript">
+$("document").ready(function(){
+	//$("p:first").css("border","2px dashed green");//filters out first para
+	//$("p:last").css("border","2px dashed blue");//filters out last para
+	//$("p:even").css("border","2px dashed blue");//even numbered para (starting at 0 index)
+	 //$("p:odd").css("border","2px dashed blue");//odd numbered para (starting at 1 index)
+	//$(".a:first").css("border","2px dashed blue");//first element with a applied
+	//$(".a:last").css("border","2px dashed blue");//last element with a applied
+	//$(".a:odd").css("border","2px dashed blue");//odd elements with a applied
+	//$(".a:even").css("border","2px dashed blue");//even elements with a applied
+	//$("p:gt(1)").css("border","2px dashed blue");//para with index gt>1
+	$("p:not(p:eq(1))").css("border","2px dashed blue");//all para with index not 1
+});
+</script>
+</body>
+</html>

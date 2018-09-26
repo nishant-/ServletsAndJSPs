@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Replacing And Removing</title>
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script>
+$("document").ready(function(){
+	//$("p").wrap("<div style='color:red'/>");//wraps all p tags into the new style which do not have a style
+	$("p").wrapAll("<div style='border:3px solid green'/>");//wraps all p into the new style
+	$("ul").empty();//removes the entire ul and its children from the dom
+});
+</script>
+<style type="text/css">
+.a{color: maroon;}
+.b{color: green;}
+</style>
+</head>
+<body>
+<ul id="list1">
+<li class="a">item01</li>
+<li class="a">item02</li>
+<li class="b">item03</li>
+<li class="b">item04</li>
+</ul>
+<div style='color:green'>
+<p class="a" id="para1">Para1</p>
+</div>
+<p class="b">Para2</p>
+<p id="para3" lang="en-us">Para3</p>
+<p id="para4">Para4</p>
+<script type="text/javascript">
+</script>
+</body>
+</html>

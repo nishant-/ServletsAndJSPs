@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+                               "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+ <form-bean name="Form1" type="com.nishant.Form1"></form-bean>
+ <form-bean name="Form2" type="com.nishant.Form2"></form-bean>
+ <form-bean name="Form3" type="com.nishant.Form3"></form-bean>
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards/>
+ <action-mappings>
+  <action input="/index.jsp" name="Form1" path="/index" scope="session" type="com.nishant.Action1">
+   <forward name="page2" path="/page2.jsp"/>
+  </action>
+  <action input="/page2.jsp" name="Form2" path="/page2" scope="session" type="com.nishant.Action2">
+   <forward name="page3" path="/page3.jsp"/>
+  </action>
+  <action input="/page3" name="Form3" path="/page3" scope="session" type="com.nishant.Action3">
+  <forward name="success" path="/success.jsp"></forward>
+  </action>
+ </action-mappings>
+ <controller/>
+</struts-config>
